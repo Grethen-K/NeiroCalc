@@ -1,0 +1,6 @@
+# ninja log v7
+54	3590	8122938582321822	CMakeFiles/neiro.dir/src/dataset.cpp.obj	8ab75ba62f38da3e
+45	3931	8122938582235207	CMakeFiles/neiro.dir/src/network.cpp.obj	2f7ba78fe3ec8fc6
+34	6200	8122938582130064	CMakeFiles/neiro.dir/src/layer.cpp.obj	98bfbef6b3005a85
+26	6323	8122938582039535	CMakeFiles/neiro.dir/src/main.cpp.obj	851b60796b2dffb3
+6326	6541	8122938645043110	neiro.exe	a1482b4c45764a32

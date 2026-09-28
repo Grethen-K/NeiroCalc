@@ -1,0 +1,33 @@
+C:\git\cpp\neiro
+├── CMakeLists.txt
+├── src/
+│   ├── main.cpp        — точка входа, демо
+│   ├── layer.hpp/cpp   — класс слоя (сетка нейронов)
+│   ├── network.hpp/cpp — класс нейросети (сетка слоёв)
+│   ├── loss.hpp        — потери при обучении
+│   └── activation.hpp  — функции активации
+└── build/              — сюда CMake кладёт результат
+
+Полная цепочка зависимостей:
+activation.hpp  ◄── neuron.hpp ◄── layer.hpp ◄── network.hpp ◄── main.cpp
+     │                 │              │              │              │
+     ▼                 ▼              ▼              ▼              ▼
+     (ничего)      neuron.cpp    layer.cpp     network.cpp    (вызывает всё)
+
+
+Loss
+это он берет в loss hpp 
+        if (pred.size() != target.size())
+            throw std::invalid_argument("Razmery pred i target dolzhny sovpadat'");
+        return 0.5 * (pred - target).squaredNorm();
+
+pred i target это вектора обучающей выборки и он считает расстояние м/у векторами * 0,5 
+тотал делается в мэйне 
+                      << total_loss / train_data.size() << '\n';
+
+Zapusk: PSh
+cd C:\git\cpp\neiro
+Remove-Item -Recurse -Force build
+cmake -B build -S . -G Ninja -DCMAKE_CXX_COMPILER=C:/msys64/ucrt64/bin/g++.exe
+cmake --build build
+.\build\neiro.exe

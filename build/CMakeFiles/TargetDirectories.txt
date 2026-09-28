@@ -1,0 +1,3 @@
+C:/git/cpp/neiro/build/CMakeFiles/neiro.dir
+C:/git/cpp/neiro/build/CMakeFiles/edit_cache.dir
+C:/git/cpp/neiro/build/CMakeFiles/rebuild_cache.dir
